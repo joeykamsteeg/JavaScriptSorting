@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Sorting</title>
+  </head>
+
+  <body onload="init()">
+    <div>
+      <h2>Visualizing Sorting Algorithms</h2>
+
+      <div class="container">
+        <h3 id="time">0.00s</h3>
+        <div id="canvas" class="canvas"></div>
+      </div>
+
+      <div class="input-container">
+        <div>
+          <label class="input delay" for="number">Amount of bars:</label>
+          <input
+            class="input"
+            value="100"
+            type="number"
+            min="1"
+            max="1000"
+            name="number"
+            id="number"
+          />
+        </div>
+
+        <button id="btnGenerate" class="input" type="button" onclick="init()">
+          Generate
+        </button>
+
+        <div>
+          <label class="input delay" for="delay">Delay (ms):</label>
+
+          <input
+            class="input delay"
+            value="1"
+            type="number"
+            min="1"
+            max="1000"
+            id="delay"
+            name="delay"
+          />
+        </div>
+
+        <div>
+          <label class="input delay" for="types">Sort type:</label>
+
+          <select id="selectSort" class="input" name="types" id="types">
+            <option value="insert">Insert</option>
+            <option value="bubble">Bubble</option>
+            <option value="selection">Selection</option>
+            <option value="shell">Shell</option>
+            <option value="bogo">Bogo</option>
+            <option value="cocktail">Cocktail</option>
+            <option value="gnome">Gnome</option>
+            <option value="oddeven">Odd-Even</option>
+            <option value="comb">Comb</option>
+          </select>
+        </div>
+
+        <button id="btnSort" class="input" type="button" onclick="sortItems()">
+          Sort
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="js/sort.js"></script>
+</html>
